@@ -8,9 +8,6 @@ $stdin.each do |line|
     total += 1
 end
 mods.each do |key, value|
-    puts "#{key} : #{value}"
+    puts "#{key} : #{value}, #{((value.to_f/total)*100.0).round(2)}%"
 end
-puts total
-mods.each do |key, value|
-    puts "#{key} : #{(value/total)*100}"
-end
+puts "#{total} IDs used"
